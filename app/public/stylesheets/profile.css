@@ -1,0 +1,326 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Personal Settings */
+html, body
+{
+    background-size: cover;
+    min-height: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+* {
+   box-sizing:border-box;
+   -webkit-box-sizing:border-box;
+   -moz-box-sizing:border-box;
+   -webkit-font-smoothing:antialiased;
+   -moz-font-smoothing:antialiased;
+   -o-font-smoothing:antialiased;
+   /* font-smoothing:antialiased; */
+   text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family:'Questrial', Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color:#3388CC;
+}
+
+h1
+{
+    font-size: 30px;
+}
+
+h2
+{
+    font-size: 25px;
+}
+
+h3
+{
+    font-size: 20px;
+}
+
+h4
+{
+    font-size: 15px;
+}
+
+h5
+{
+    font-size: 10px;
+}
+
+h6
+{
+    font-size: 5px;
+}
+
+/* Contact Form Styles */
+input
+{
+    width: 100%;
+    border:1px dashed #2EE2FD;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 5px;
+    color: rgb(131, 123, 123);
+}
+
+input:hover,
+input:focus
+{
+    background: url(https://www.shareicon.net/data/32x32/2016/11/15/853440_edit_512x512.png) no-repeat;
+    background-size: 18px 18px;
+    background-position: right;
+    background-color: #D2F8FD;
+}
+
+input:focus
+{
+    font-weight: bold;
+    color: #000;
+}
+
+span
+{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Contact Form Styles */
+/* center the profile page */
+#container
+{
+    position: relative;
+    width: 100%;
+    min-height:100%;
+    height: 100%;
+    display: table;
+    overflow: auto;
+}
+
+#profile {
+	background: url('../images/logo_fii.png') no-repeat;
+	background-color:rgb(226, 226, 226);
+	background-size: 35px 35px;
+	padding: 10px 20px 30px 20px;
+    position: absolute;
+    display: table-cell;
+	border-radius:7px;
+	-webkit-border-radius:7px;
+    -moz-border-radius:7px;
+    margin-top:5%;
+    left: 30%;
+    right: 30%;
+    margin-left: 0;
+    width:40%;
+    max-width: 600px;
+    min-width: 250px;
+    height:80%;
+    min-height: 620px;
+    max-height: 800px;
+}
+
+#profile #title,
+#profile #content
+{
+    position: relative;
+    margin-left: 15px;
+    padding: 5px 5px 0px 5px;
+}
+
+#title
+{
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    color: #3388CC;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#content div
+{
+    margin-left: 0px;
+}
+
+/** have a nice ampersand **/
+.title-text:after {
+    font-size:25px;
+    color:#3388CC;
+    content:'&';
+    text-align:center;
+    display:block;
+    width:100%;
+    font-family:'Alice', Verdana, serif;
+    text-shadow: 0px 1px 0px #fff;
+}
+/** create the gradient bottom **/
+.title-text:before {
+    position:relative;
+    content:' ';
+    text-align:center;
+    display:block;
+    height:2px;
+    width:100%;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #3388CC 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, #3388CC 58%, rgba(51,136,204,0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(42%, #3388CC), color-stop(43%, rgba(180, 178, 178, 0)), color-stop(50%, rgba(168, 166, 166, 0)), color-stop(57%, rgba(180, 178, 178, 0)), color-stop(58%, #3388CC), color-stop(90%, #3388CC), color-stop(100%, rgba(255, 255, 255, 0)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #3388CC 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, #3388CC 58%, rgba(51,136,204,0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #3388CC 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, #3388CC 58%, rgba(51,136,204,0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #3388CC 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, #3388CC 58%, rgba(51,136,204,0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(left, rgba(255, 255, 255, 0) 0%, #3388CC 42%, rgba(180, 178, 178, 0) 43%, rgba(168, 166, 166, 0) 50%, rgba(180, 178, 178, 0) 57%, #3388CC 58%, rgba(51,136,204,0.3) 90%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
+}
+
+h1.title-text::before
+{
+    bottom:-45px;
+}
+
+h2.title-text::before
+{
+    bottom: -40px;
+}
+
+.column,.auxText{ 
+    color: #0087FF;
+    font-size: 18px;
+    font-family: Arial, san-serif;
+    font-weight: bold;
+}
+
+#profile input[type="button"] {
+    font-family:'Questrial', Verdana, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    cursor:pointer;
+    width:35%;
+    border:none;
+    background:#2EE2FD;
+    background-image:linear-gradient(bottom, #2EE2FD 0%, #3388CC 60%);
+    background-image:-moz-linear-gradient(bottom, #2EE2FD 0%, #3388CC 60%);
+    background-image:-webkit-linear-gradient(bottom, #2EE2FD 0%, #3388CC 60%);
+    color:#FFF;
+    margin:0 0 5px;
+    padding:10px;
+    border-radius:5px;
+}
+#profile input[type="button"]:hover {
+    font-weight: bold;
+    background-image:linear-gradient(bottom, #28ADF4 0%, #2EE2FD 52%);
+    background-image:-moz-linear-gradient(bottom, #28ADF4 0%, #2EE2FD 52%);
+    background-image:-webkit-linear-gradient(bottom, #28ADF4 0%, #2EE2FD 52%);
+    -webkit-transition:background 0.3s ease-in-out;
+    -moz-transition:background 0.3s ease-in-out;
+    transition:background-color 0.3s ease-in-out;
+}
+#profile input[type="button"]:active {
+   box-shadow:inset 0 1px 3px rgba(0,0,0,0.5);
+}
+/* Align the ok button to the left and the cancel button to the right */
+#okButton
+{
+    float: left;
+    left: 10%;
+}
+
+#cancelButton
+{
+    float: right;
+    right: 10%;
+}
+
+#title .title-text {
+    margin-top: 30px;
+}
+
+
+/* Adding the icon fonts */
+.column-name,
+.column-surname,
+.column-username{
+    background: url('../images/settings-user-icon.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: left;
+    padding-left: 19px;
+    vertical-align: middle;
+    padding-top: 3px;
+}
+
+.column-study-year,
+.column-group{
+    background: url('../images/settings-university-icon.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: left;
+    padding-left: 20px;
+    vertical-align: middle;
+    padding-top: 3px;
+}
+
+/* Make form look nice on smaller screens */
+@media only screen and (max-width: 580px) {
+   #profile{
+      left: 4%;
+      margin-right: 4%;
+      width: 88%;
+      margin-left: 0;
+      padding-left: 3%;
+      padding-right: 3%;
+      background-size: 30px 30px;
+      min-width: 0px; /* reset the min-width property */
+      min-height: 400px;
+   }
+}

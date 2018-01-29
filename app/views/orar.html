@@ -1,0 +1,261 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Orar</title>
+    <link rel="stylesheet" href="orar.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="touch.js"></script>
+</head>
+
+<body>
+    <input type="checkbox" id="toggleMenu">
+    <label for="toggleMenu" class="menu-icon">
+        &#9776
+    </label>
+    <header>
+        <div id="brand">Welcome to FIISchMan</div>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="orar.html">Orar</a>
+            </li>
+            <li>
+                <a href="profile.html">Profil</a>
+            </li>
+            <li>
+                <a href="settings.html">Setari</a>
+            </li>
+            <li>
+                <a href="login.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <!-- content loaded through a js function -->
+        <div class="timetable-desktop">
+            <table class="courses">
+                <tr>
+                    <th>ora</th>
+                    <th>
+                        <input type="button" class="scrollButton"> Luni
+                        <input type="button" class="scrollButton">
+                    </th>
+                    <th>
+                        <input type="button" class="scrollButton"> Marti
+                        <input type="button" class="scrollButton">
+                    </th>
+                    <th>
+                        <input type="button" class="scrollButton"> Miercuri
+                        <input type="button" class="scrollButton">
+                    </th>
+                    <th>
+                        <input type="button" class="scrollButton"> Joi
+                        <input type="button" class="scrollButton">
+                    </th>
+                    <th>
+                        <input type="button" class="scrollButton"> Vineri
+                        <input type="button" class="scrollButton">
+                    </th>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td rowspan="1" class="scheduleItem" class="scheduleItem">
+                        <p>ACSO</p>
+                        <p>3A6</p>
+                        <p>C410</p>
+                        <p>prof. Cosmin Varlan</p>
+                    </td>
+                    <td rowspan="2" class="scheduleItem">
+                        <p>BD</p>
+                        <p>3A6</p>
+                        <p>C410</p>
+                        <p>prof. Cosmin Varlan</p>
+                    </td>
+                    <td rowspan="2" class="scheduleItem"></td>
+                    <td rowspan="2" class="scheduleItem">AI</td>
+                    <td rowspan="2" class="scheduleItem">ML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td rowspan="2" class="scheduleItem">
+                        <p>BD</p>
+                        <p>3A6</p>
+                        <p>C410</p>
+                        <p>prof. Cosmin Varlan</p>
+                    </td>
+                    <td rowspan="2" class="scheduleItem"></td>
+                    <td rowspan="2" class="scheduleItem">SI</td>
+                    <td rowspan="2" class="scheduleItem">AI</td>
+                    <td rowspan="2" class="scheduleItem">ML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td rowspan="2" class="scheduleItem"></td>
+                    <td rowspan="2" class="scheduleItem">BD</td>
+                    <td rowspan="2" class="scheduleItem">SI</td>
+                    <td rowspan="2" class="scheduleItem"></td>
+                    <td rowspan="2" class="scheduleItem">ML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td rowspan="2" class="scheduleItem">ACSO</td>
+                    <td rowspan="2" class="scheduleItem">BD</td>
+                    <td rowspan="2" class="scheduleItem">SI</td>
+                    <td rowspan="2" class="scheduleItem">AI</td>
+                    <td rowspan="2" class="scheduleItem">ML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td rowspan="2" class="scheduleItem">ACSO</td>
+                    <td rowspan="2" class="scheduleItem">BD</td>
+                    <td rowspan="2" class="scheduleItem">SI</td>
+                    <td rowspan="2" class="scheduleItem">AI</td>
+                    <td rowspan="2" class="scheduleItem">ML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td rowspan="2" class="scheduleItem">ACSO</td>
+                    <td rowspan="2" class="scheduleItem">BD</td>
+                    <td rowspan="2" class="scheduleItem">SI</td>
+                    <td rowspan="2" class="scheduleItem">AI</td>
+                    <td rowspan="2" class="scheduleItem">ML</td>
+                </tr>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="timetable-mobile" id="timetable-mobile">
+            <div class="day-title">Luni</div>
+            <div class="day-list">
+                <ul>
+                    <li class="day-list-item">
+                        <a class="day-list-item-course day-list-item-has-color" href="http://">
+                            <div class="day-list-item-color"></div>
+                            <div class="day-list-item-text">
+                                <div class="day-list-item-course-title">
+                                    ACSO
+                                </div>
+                                <div class="day-list-item-course-time">
+                                    08:00 - 10:00
+                                </div>
+                                <div class="day-list-item-course-description">
+                                    Curs, Sala: C112
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="day-list-item">
+                        <a class="day-list-item-course day-list-item-has-color" href="http://">
+                            <div class="day-list-item-color"></div>
+                            <div class="day-list-item-text">
+                                <div class="day-list-item-course-title">
+                                    SI
+                                </div>
+                                <div class="day-list-item-course-time">
+                                    10:00 - 12:00
+                                </div>
+                                <div class="day-list-item-course-description">
+                                    Seminar, Sala: C413
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="day-list-item">
+                        <a class="day-list-item-course day-list-item-has-color" href="http://">
+                            <div class="day-list-item-color"></div>
+                            <div class="day-list-item-text">
+                                <div class="day-list-item-course-title">
+                                    CLIW
+                                </div>
+                                <div class="day-list-item-course-time">
+                                    12:00 - 14:00
+                                </div>
+                                <div class="day-list-item-course-description">
+                                    Laborator, Sala: C409
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="day-list-item">
+                        <a class="day-list-item-course day-list-item-has-color" href="http://">
+                            <div class="day-list-item-color"></div>
+                            <div class="day-list-item-text">
+                                <div class="day-list-item-course-title">
+                                    LIBER
+                                </div>
+                                <div class="day-list-item-course-time">
+                                    14:00 - 16:00
+                                </div>
+                                <div class="day-list-item-course-description">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="day-list-item">
+                        <a class="day-list-item-course day-list-item-has-color" href="http://">
+                            <div class="day-list-item-color"></div>
+                            <div class="day-list-item-text">
+                                <div class="day-list-item-course-title">
+                                    LIBER
+                                </div>
+                                <div class="day-list-item-course-time">
+                                    16:00 - 18:00
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="day-list-item">
+                        <a class="day-list-item-course day-list-item-has-color" href="http://">
+                            <div class="day-list-item-color"></div>
+                            <div class="day-list-item-text">
+                                <div class="day-list-item-course-title">
+                                    BD
+                                </div>
+                                <div class="day-list-item-course-time">
+                                    14:00 - 16:00
+                                </div>
+                                <div class="day-list-item-course-description">
+                                    Laborator, Sala: C405
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- <script src="touch.js">
+                listen_for_touch("timetable-mobile")
+            </script> -->
+        <script>
+            listen_for_touch("timetable-mobile")
+        </script>
+    </div>
+
+</body>
+
+</html>

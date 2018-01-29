@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+    </script>
+</head>
+
+<body>
+    <div id="login-form">
+        <div id="title">
+            <h2 class="title-text">FII Schedule Manager</h2>
+        </div>
+        <form id="register_form">
+            <div>
+                <label for="email">
+                    <span class="required">&nbsp;Email:</span>
+                    <input type="text" id="email" name="email" value="" placeholder="Fenrir email..." required="required" tabindex="1" autofocus="autofocus"
+                    />
+                </label>
+            </div>
+            <div>
+                <label for="password">
+                    <span class="required">&nbsp;Password:</span>
+                    <input type="password" id="password" name="password" value="" placeholder="Fenrir password..." tabindex="2" required="required"
+                    />
+                </label>
+                <label for="confirm_password">
+                    <span class="required">&nbsp;Confirm Password:</span>
+                    <input type="password" id="confirm_password" name="confirm_password" value="" placeholder="Confirm password..." tabindex="2"
+                        required="required" />
+                </label>
+            </div>
+            <div>
+                <button name="submit" type="submit" id="register">REGISTER</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $('#register_form').on('submit', function (e) {
+            e.preventDefault();
+
+            $.post('/api/register', $(this).serialize())
+            .done(function(data) {
+                console.log(data);
+                alert(data);
+                location.replace("/orar.html");
+            })
+            .fail(function(res) {
+                console.log(res.responseText);
+                alert(res.responseText);
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Schedule Design built with JS</title>
+    <link rel="stylesheet" href="../public/stylesheets/new_schedule.css" />
+    <link rel="stylesheet" href="../public/stylesheets/index.css">
+    <script src="../public/javascripts/menu.js"></script>
+    <script src="../public/javascripts/schedule.js"></script>
+</head>
+<body>
+    <div id="header">
+        <div id="menuBox" onclick="showMenu()">
+            <input type="checkbox" id="toggleMenu">
+            <label for="toggleMenu" class="menu-icon" id="toggleMenuLabel">
+                &#9776
+            </label>
+        </div>
+        <div id="headerText">
+            <header>
+                <div id="brand">Welcome to FIISchMan</div>
+            </header>
+        </div>
+    </div>
+    <nav id="menu" onclick="removeCheckedCheckBox()">
+        <ul>
+			<li>
+				<a href="new_schedule.html">Orar</a>
+			</li>
+			<li>
+				<a href="profile.html">Setari</a>
+			</li>
+			<li>
+				<a href="login.html">Logout</a>
+			</li>
+		</ul>
+    </nav>
+
+    <div id="schedule"></div>
+    <script type="text/javascript">
+        createSchedule();
+    </script>
+
+    <!-- overlay for adding a schedule item -->
+    <div id="overlayAdd">
+        <div id="addScheduleItem">
+            <div id="title">
+                <h2 class="title-text">Add New Schedule Item</h2>
+            </div>
+            <br/><br/>
+            <form id="addScheduleItemForm">
+                <div class="form-item">
+                    <label for="addScheduleItemSelect">
+                        <span class="required" id="addScheduleItemSpan">&nbsp;Please select one of the following options:</span>
+                        <br>
+                        <select id="addScheduleItemSelect" name="addScheduleItemSelect">
+                            <option value="student" selected="selected">Student</option>
+                            <option value="proffesor">Proffesor</option>
+                        </select>
+                    </label>
+                </div>
+                <div id="buttonArea">
+                    <button name="submit" type="submit" id="add">ADD</button>
+                    <button name="cancel" type="button" id="cancel" onclick="cancelAddScheduleItem()">CANCEL</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- overlay for viewing the detailed informations about a schedule item -->
+    <div id="overlayEdit">
+        <div id="viewScheduleItem">
+            <div id="title">
+                <h1 class="title-text">Item Details</h1>
+            </div>
+            <br />
+            <div id="viewScheduleItemContent">
+                <div id="scheduleItemName">
+                    <span class="column">Name:</span>
+                    <input type="text" value="Pedagogie II (Teoria si metodologia instruirii + Teoria si metodologia evaluarii)" id="scheduleItemName" readonly>
+                </div>
+                <br />
+                <div id="scheduleItemType">
+                    <span class="column">Type:</span>
+                    <input type="text" value="Seminar" id="scheduleItemTypeInput" readonly>
+                </div>
+                <br />
+                <div id="scheduleItemStartHour">
+                    <span class="column">Start hour:</span>
+                    <input type="text" value="" id="scheduleItemStartHourInput" readonly/>
+                </div>
+                <br />
+                <div id="scheduleItemEndHour">
+                    <span class="column">End hour:</span>
+                    <input type="text" value="" id="scheduleItemEndHourInput" readonly/>
+                </div>
+                <br />
+                <div id="scheduleItemProffesors">
+                    <span class="column">Proffesors:</span>
+                    <input type="text" value="Lect. dr. Roxana Ghaitau" id="scheduleItemProffesorsInput" readonly/>
+                </div>
+                <br />
+                <div id="scheduleItemRooms">
+                    <span class="column">Rooms:</span>
+                    <input type="text" value="C905 , laptop , video" id="scheduleItemRoomsInput" readonly/>
+                </div>
+                <br><br><br>
+                <input type="button" id="deleteButton" value="Delete" />
+                <input type="button" id="cancelButton" value="Cancel" onclick="cancelViewDetailedInformations()"/>
+            </div>
+        </div>
+    </div>
+
+    <style type="text/css">
+        .unused
+        {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: url('../public/images/unused_schedule_cell_icon.png');
+            background-repeat: no-repeat;
+            background-size: 45px 45px;
+            background-position: center;
+        }
+
+        .unused:hover
+        {
+            background: url('../public/images/unused_schedule_cell_hover_icon.png');
+            background-repeat: no-repeat;
+            background-size: 55px 55px;
+            background-position: center;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,145 @@
+* { padding: 0; margin: 0; }
+body { font-family: sans-serif; }
+a { text-decoration: none; color: rgb(255, 255, 255) }
+li { list-style-type: none; }
+
+#header
+{
+    height: 50px;
+    width:100%;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    display: table;
+    top: 0;
+    z-index: 1;
+    background: #ffffff;
+    border-bottom: 1px solid #aaaaaa ;
+}
+
+#menuBox,
+#headerText
+{
+    display: table-cell;
+}
+
+#menuBox
+{
+    position: relative;
+    left: 0;
+    width: 4%;
+    height: 100%;
+}
+
+#headerText
+{
+    position: relative;
+    left: 3%;
+    width: 97%;
+}
+
+header {
+    width:100%;
+    height: 50px;
+    margin: auto;
+}
+
+#brand {
+    float: left;
+    line-height: 50px;
+    color: #3388CC;
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 20px;
+}
+
+nav {
+    height: 100%;
+    text-align: center;
+    border-right: 1px solid #3388CC;
+}
+
+nav a {
+    background: url('../images/logo_fii.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: left;
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #3388CC;
+    color: #000000;
+}
+
+nav a:hover {
+    font-weight: bold;
+    background-color: #2EE2FD;
+    color: #ffffff;
+}
+nav li:last-child a {
+    border-bottom: none;
+}
+
+/* NAVIGATION */
+
+#menu {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background: #ffffff;;
+    left: -250px;
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-webkit-transition: all .4s ease-in-out;
+}
+
+.menu-icon {
+    padding: 12px 20px;
+    background: #3388CC;
+    color: #ffffff;
+    cursor: pointer;
+    float: left;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    height: 42px;
+    font-size: 18px;
+    vertical-align: middle;
+    /* border-radius: 10px; */
+
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+.menu-icon:hover
+{
+    background: #2EE2FD;
+}
+#toggleMenu {
+    margin-top: 50px;
+    display: none;
+}
+
+#toggleMenu:checked + label{
+    background: #2EE2FD;
+}
+
+/* #content {
+    transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-webkit-transition: all .4s ease-in-out;
+}
+
+#toggleMenu:checked ~ #content {
+    padding: 0 0 0 250;
+} */
+
+@media only screen and (min-width: 768px) {
+   #brand {
+       font-size: 25px;
+   }
+}

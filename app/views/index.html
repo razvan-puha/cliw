@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="index.css">
+
+    <script>
+        function load_content_page(page_name) {
+            var content_element = document.getElementById("content")
+            content_element.innerHTML = '<object type="text/html" data=' + page_name + ' style="width:100%; height:100%" ></object>'
+
+            var menu_checkbox = document.getElementById("toggleMenu");
+            menu_checkbox.checked = false;
+
+            return false;
+        }
+    </script>
+
+    <title>FII Schedule Manager</title>
+</head>
+
+<body>
+    <input type="checkbox" id="toggleMenu">
+    <label for="toggleMenu" class="menu-icon">
+        &#9776
+    </label>
+    <header>
+        <div id="brand">Welcome to FIISchMan</div>
+    </header>
+
+    <nav class="menu">
+        <ul>
+            <li>
+                <a href="orar.html">Orar</a>
+            </li>
+            <li>
+                <a href="profile.html">Profil</a>
+            </li>
+            <li>
+                <a href="settings.html">Setari</a>
+            </li>
+            <li>
+                <a href="login.html">Logout</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <!-- content loaded through a js function -->
+    </div>
+
+    <!-- <script>
+        load_content_page('orar.html')
+    </script> -->
+</body>
+
+</html>

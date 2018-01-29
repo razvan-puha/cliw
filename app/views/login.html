@@ -1,0 +1,144 @@
+<html>
+
+<head>
+	<title>Formular login</title>
+	<link rel="stylesheet" type="text/css" href="../public/stylesheets/login.css">
+	<link rel="stylesheet" type="text/css" href="../public/stylesheets/register.css">
+	<script src="../public/javascripts/parse_schedule.js"></script>
+	<script src="../public/javascripts/register.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+
+<body onload="showLoginForm()">
+	<script>
+		parse_schedule();
+	</script>
+	<div id="login-form">
+		<div id="title">
+			<h2 class="title-text">FII Schedule Manager</h2>
+		</div>
+		<br /><br />
+		<form id="login_form">
+			<div class="form-item">
+				<label for="email">
+					<span class="required" id="login_username">&nbsp;Email:</span>
+					<input type="text" id="email" name="email" value="" placeholder="Fenrir email..." required="required" tabindex="1" autofocus="autofocus"
+					/>
+				</label>
+			</div>
+			<div class="form-item">
+				<label for="password">
+					<span class="required" id="login_password">&nbsp;Password:</span>
+					<input type="password" id="password" name="password" value="" placeholder="Fenrir password..." tabindex="2" required="required"
+					/>
+				</label>
+			</div>
+			<br/>
+		</form>
+		<button name="submit" type="submit" id="login">LOGIN</button>
+		<button name="register" type="button" id="register" onclick="showRegisterForm()">REGISTER</button>
+	</div>
+
+	<!-- Register Form -->
+	<div id="overlay">
+		<div id="register-form">
+			<div id="title">
+				<h2 class="title-text">FII Schedule Manager</h2>
+			</div>
+			<br/><br/>
+			<form id="register_form">
+				<div id="form-item-left">
+					<div class="form-item">
+						<label for="email">
+							<span class="required" id="username">&nbsp;Email:</span>
+							<input type="text" id="email" name="email" value="" placeholder="Email..." required="required" tabindex="1" autofocus="autofocus"
+							/>
+						</label>
+					</div>
+					<div class="form-item">
+						<label for="password">
+							<span class="required" id="password">&nbsp;Password:</span>
+							<input type="password" id="password" name="password" value="" placeholder="Password..." tabindex="2" required="required"
+							/>
+						</label>
+					</div>
+					<div class="form-item">
+						<label for="confirm_password">
+							<span class="required" id="confirm_password">&nbsp;Confirm Password:</span>
+							<input type="password" id="confirm_password" name="confirm_password" value="" placeholder="Confirm password..." tabindex="2"
+								required="required" />
+						</label>
+					</div>
+					<div class="form-item">
+						<label for="account_type">
+							<span class="required" id="account_type">&nbsp;Account Type:</span>
+							<select id="account_type_select" name="account_type" onchange="loadDynamicRegisterForm()">
+								<option value="student" selected="selected">Student</option>
+								<option value="proffesor">Proffesor</option>
+							</select>
+						</label>
+					</div>
+				</div>
+				<div id ="form-item-right">	
+				</div>
+				<div id="buttonArea">
+					<button name="submit" type="submit" id="registerBtn">REGISTER</button>
+					<button name="cancel" type="button" id="cancelBtn" onclick="hideRegisterForm()">CANCEL</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script>
+		$('#login_form').on('submit', function (e) {
+			e.preventDefault();
+
+			$.post('/api/login', $(this).serialize())
+				.done(function(data) {
+					console.log(data);
+					alert(data);
+					location.replace("/orar.html");
+				})
+				.fail(function (res) {
+					console.log(res.responseText);
+					alert(res.responseText);
+				});
+		});
+
+		$('#register_form').on('submit', function (e) {
+            e.preventDefault();
+
+            $.post('/api/register', $(this).serialize())
+            .done(function(data) {
+                console.log(data);
+                alert(data);
+                location.replace("/orar.html");
+            })
+            .fail(function(res) {
+                console.log(res.responseText);
+                alert(res.responseText);
+            });
+		});
+
+		function showLoginForm()
+		{
+			var loginForm = document.getElementById("login-form");
+			loginForm.style.marginTop = "75px";
+		}
+		
+		function showRegisterForm() 
+		{
+			document.getElementById("overlay").style.top = 0;
+			document.getElementById("overlay").style.bottom = 0;
+			loadDynamicRegisterForm();
+		}
+
+		function hideRegisterForm() 
+		{
+			document.getElementById("overlay").style.top = "-100%";
+			document.getElementById("overlay").style.bottom = "200%";
+		}
+	</script>
+</body>
+
+</html>

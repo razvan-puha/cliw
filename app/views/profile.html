@@ -1,0 +1,82 @@
+<html>
+
+<head>
+	<title>Pagina profil</title>
+	<link rel="stylesheet" href="../public/stylesheets/profile.css">
+	<link rel="stylesheet" href="../public/stylesheets/index.css">
+	<script src="../public/javascripts/menu.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<div id="menuBox" onclick="showMenu()">
+			<input type="checkbox" id="toggleMenu">
+			<label for="toggleMenu" class="menu-icon" id="toggleMenuLabel">
+				&#9776
+			</label>
+		</div>
+		<div id="headerText">
+			<header>
+				<div id="brand">Welcome to FIISchMan</div>
+			</header>
+		</div>
+	</div>
+	<nav id="menu" onclick="removeCheckedCheckBox()">
+		<ul>
+			<li>
+				<a href="new_schedule.html">Orar</a>
+			</li>
+			<li>
+				<a href="profile.html">Setari</a>
+			</li>
+			<li>
+				<a href="login.html">Logout</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="container">
+		<!-- content loaded through a js function -->
+		<div id="profile">
+			<div id="title">
+				<h1 class="title-text">Profile</h1>
+			</div>
+			<br />
+			<div id="content">
+				<div id="name">
+					<span class="column-name">Name:</span>
+					<input type="text" value="Puha">
+				</div>
+				<br />
+				<div id="surname">
+					<span class="column-surname">Surname:</span>
+					<input type="text" value="Razvan-Petru" />
+				</div>
+				<br />
+				<div id="username">
+					<span class="column-username">Username:</span>
+					<input type="text" value="petru.puha@info.uaic.ro" />
+				</div>
+				<br /><br />
+
+				<div id="subHeader">
+					<h2 class="title-text">University informations</h2>
+				</div>
+				<br />
+				<div id="yearOfStudy">
+					<span class="column-study-year">Year of study:</span>
+					<input type="text" value="3" />
+				</div>
+				<br />
+				<div id="group">
+					<span class="column-group">Group:</span>
+					<input type="text" value="A6" />
+				</div>
+				<br><br><br>
+				<input type="button" id="okButton" value="OK" />
+				<input type="button" id="cancelButton" value="Cancel" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+li { list-style-type: none;}
+
+td {
+    color: white;
+    background: #3388CC;
+    text-align: left;
+    padding-left: 30px;
+    font-size: 13px;
+    border-radius: 5px;
+
+    width: 150px;
+    height: 50px;
+}
+td:hover {
+    background:green;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+tr td:first-child {
+    width: 50px;
+    font-size: 25px;
+    text-align: center;
+    padding-left: 0;
+}
+
+tr td:first-child:hover {
+    color: white;
+    background: #3388CC;
+}
+
+tr {
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+}
+th {
+    font-size: 20px;
+}
+
+th, td {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+td[rowspan=2] {
+    font-size: 25px;
+}
+td[rowspan=1] {
+    font-size: 23px;
+}
+
+.scrollButton {
+    display: none;
+}
+
+.courses {
+    width: 100%;
+}
+
+.timetable-desktop {
+    display: none;
+}
+
+.timetable-mobile {
+    display: inline;
+    height: 90%;
+}
+
+@media only screen and (min-width: 768px) {
+    .timetable-desktop {
+        display: inline;
+    }
+    .timetable-mobile {
+        display: none;
+    }
+}
+
+.day-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 32px;
+}
+
+.day-list {
+    padding-top: 10px;
+}
+
+.day-list-item {
+    font-size: 18px;
+    padding-left: 24px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+    height: 50px;
+    border-bottom: 1px solid #4d4b4b;
+}
+
+a.day-list-item-course {
+    text-decoration: none;
+    color: #000000;
+}
+
+a.day-list-item-course:hover .day-list-item-color{
+    text-decoration: underline;
+
+    width: 11px;
+    height: 11px;
+    margin: 6px 0 0 0;
+}
+
+.day-list-item-color {
+    background: #3388CC;
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-radius: 15px;
+    margin: 8px 2px 2px 2px;
+    float: left;
+    -webkit-transition: all .1s;
+    -moz-transition: all .1s;
+    -o-transition: all .1s;
+    -ms-transition: all .1s;
+    transition: all .1s;
+}
+
+.day-list-item-text {
+    padding: 0 8 0 20px;
+}
+
+.day-list-item-course-title  {
+    float: left;
+}
+.day-list-item-course-time {
+    text-align: right;
+}
+
+.day-list-item-course-description {
+    font-size: 12px;
+}
+
+[class*=day-] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
